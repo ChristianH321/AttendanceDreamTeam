@@ -5,6 +5,7 @@
  */
 package attendance2020.be;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
@@ -14,13 +15,17 @@ import javafx.beans.property.StringProperty;
 public class User 
 {
     
-    private StringProperty userName;
-    private StringProperty userPassword;
+    private final StringProperty userName;
+    private final StringProperty userPassword;
+    
+    public User() {
+        this(null, null);
+    }
 
-    public User(StringProperty userName, StringProperty userPassword) 
+    public User(String userName, String userPassword) 
     {
-        this.userName = userName;
-        this.userPassword = userPassword;
+        this.userName = new SimpleStringProperty(userName);
+        this.userPassword = new SimpleStringProperty(userPassword);
     }
 
     public StringProperty getUserName() {
@@ -30,17 +35,5 @@ public class User
     public StringProperty getUserPassword() {
         return userPassword;
     }
-
-    public void setUserName(StringProperty userName) {
-        this.userName = userName;
-    }
-
-    public void setUserPassword(StringProperty userPassword) {
-        this.userPassword = userPassword;
-    }
-    
-    
-    
-    
     
 }
