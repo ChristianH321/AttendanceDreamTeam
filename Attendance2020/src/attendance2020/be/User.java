@@ -11,13 +11,13 @@ import javafx.beans.property.StringProperty;
  *
  * @author hp
  */
-public class Student 
+public class User 
 {
     
     private StringProperty userName;
     private StringProperty userPassword;
 
-    public Student(StringProperty userName, StringProperty userPassword) 
+    public User(StringProperty userName, StringProperty userPassword) 
     {
         this.userName = userName;
         this.userPassword = userPassword;
