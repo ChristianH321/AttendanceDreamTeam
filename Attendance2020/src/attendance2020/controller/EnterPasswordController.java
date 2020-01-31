@@ -10,26 +10,28 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 
 /**
+ * FXML Controller class
  *
- * @author chris
+ * @author hp
  */
-public class FXMLDocumentController implements Initializable {
-    
+public class EnterPasswordController implements Initializable {
+
     @FXML
-    private Label label;
-    
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
+    private PasswordField dayPassword;
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void getDayPassword(ActionEvent event) {
+    }
     
 }
